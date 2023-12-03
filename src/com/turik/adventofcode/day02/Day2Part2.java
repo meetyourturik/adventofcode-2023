@@ -11,7 +11,6 @@ import java.util.regex.Pattern;
 
 public class Day2Part2 {
 
-    // if game's impossible return 0
     static int game(String line) {
         List<String> colors = List.of(
                 "red",

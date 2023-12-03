@@ -3,7 +3,6 @@ package com.turik.adventofcode.day01;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.List;
 import java.util.Map;
 
 public class Day1Part2 {
