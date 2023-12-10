@@ -38,7 +38,7 @@ public class Day8Part2 {
             }
         }
 
-        Deque<Long> deque = new ArrayDeque<>();
+        long res = 1L;
 
         for (String curr: positions) {
             int step = 0;
@@ -47,15 +47,9 @@ public class Day8Part2 {
                 int take = ins == 'L' ? 0 : 1;
                 curr = maps.get(curr)[take];
             }
-            deque.push((long) step);
+            res = lcm(res, step);
         }
 
-        while (deque.size() > 1) {
-            long i1 = deque.pop();
-            long i2 = deque.pop();
-            deque.push(lcm(i1, i2));
-        }
-
-        System.out.println(deque);
+        System.out.println(res);
     }
 }
