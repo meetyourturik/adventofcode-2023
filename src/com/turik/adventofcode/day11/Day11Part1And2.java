@@ -48,10 +48,8 @@ public class Day11Part1And2 {
         for (int i = 0; i < galaxies.size() - 1; i++) {
             int[] gal1 = galaxies.get(i);
             for (int j = i+1; j < galaxies.size(); j++) {
-
                 int[] gal2 = galaxies.get(j);
-                int dist = Math.abs(gal1[0] - gal2[0]) + Math.abs(gal1[1] - gal2[1]);
-                int dist2 = Math.abs(gal1[0] - gal2[0]) + Math.abs(gal1[1] - gal2[1]);
+                int dist, dist2 = (dist = Math.abs(gal1[0] - gal2[0]) + Math.abs(gal1[1] - gal2[1]));
                 // accounting for horizontal expansion
                 for (int h = Math.min(gal1[0], gal2[0]); h <= Math.max(gal1[0], gal2[0]); h++) {
                     if (!galaxieX.contains(h)) {
